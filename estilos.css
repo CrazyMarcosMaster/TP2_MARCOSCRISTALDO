@@ -1,94 +1,44 @@
-/* ====== ESTILO GENERAL ====== */
+/* Agregamos más detalles visuales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f7;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    background: linear-gradient(180deg, #e0f7fa, #f0f4f7);
 }
 
-header {
-    background-color: #0077b6;
-    color: white;
-    padding: 15px 0;
+header, footer {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-main {
-    padding: 20px;
+/* Animación suave al cargar */
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-footer {
-    background-color: #003049;
-    color: white;
-    padding: 10px;
-    font-size: 14px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+h1, h2, p, table, .galeria {
+    animation: aparecer 1.5s ease;
 }
 
-/* ====== BOTONES ====== */
+/* Agregar más efectos a los botones */
 .boton {
-    display: inline-block;
-    background-color: #0096c7;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: transform 0.3s, background-color 0.3s;
+    background-image: linear-gradient(90deg, #0096c7, #48cae4);
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
 }
 
 .boton:hover {
-    background-color: #0077b6;
-    transform: scale(1.1);
+    background-image: linear-gradient(90deg, #0077b6, #00b4d8);
 }
 
-/* ====== TABLA ====== */
+/* Mejorar estilo de tabla */
 table {
-    margin: 20px auto;
-    border-collapse: collapse;
-    width: 60%;
-    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th, td {
-    border: 1px solid #0077b6;
-    padding: 10px;
+    transition: background-color 0.4s;
 }
 
-th {
-    background-color: #0077b6;
-    color: white;
-}
-
-/* ====== GALERÍA ====== */
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.foto {
-    background-color: white;
-    border-radius: 10px;
-    width: 180px;
-    padding: 10px;
-    box-shadow: 0 0 5px #888;
-    transition: transform 0.5s;
-}
-
-.foto img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.foto:hover {
-    transform: scale(1.1);
-}
-
-figcaption {
-    font-weight: bold;
-    margin-top: 5px;
+tr:hover td {
+    background-color: #caf0f8;
 }
